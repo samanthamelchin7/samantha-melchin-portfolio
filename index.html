@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samantha Melchin | Strategic Communications Portfolio</title>
+    <style>
+        /* FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            color: #ffffff;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            color: #7e57c2;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #7e57c2, #b39ddb);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #444;
+        }
+        
+        a {
+            color: #7e57c2;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #5e35b1;
+            text-decoration: underline;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            padding: 6rem 0 3rem;
+            background: linear-gradient(135deg, #7e57c2 0%, #b39ddb 100%);
+            color: white;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 3rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-content {
+            flex: 1;
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-item i {
+            margin-right: 0.5rem;
+        }
+        
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        nav li {
+            margin-right: 1.5rem;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem 0;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        nav a:hover {
+            color: #7e57c2;
+        }
+        
+        .highlight {
+            color: #7e57c2;
+            font-weight: 600;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            position: relative;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* PROJECT LINKS STYLING */
+        .project-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-link {
+            display: block;
+            padding: 1rem;
+            background: #f5f7fa;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #7e57c2;
+            text-decoration: none;
+        }
+        
+        .project-link:hover {
+            background: white;
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+        }
+        
+        .project-link h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-link p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        /* FOOTER STYLES */
+        footer {
+            background: #7e57c2;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+        
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        footer h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #5e35b1;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* RESPONSIVE STYLES */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin-right: 1rem;
+            }
+            
+            .project-links {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 4rem 0 2rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://drive.google.com/uc?id=1JWaaoFiwvcWAD9mAitkp_DtOfou0CGHZ" alt="Samantha Melchin" />
+                </div>
+                <div class="profile-content">
+                    <h1>Samantha Melchin</h1>
+                    <p>Strategic Marketing & Communications Professional with expertise in campaign development, content creation, and data-driven storytelling.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <a href="mailto:samantha.melchin@gmail.com">
+                                samantha.melchin@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="tel:8573661937">
+                                857-366-1937
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.linkedin.com/in/samantha-melchin-163b30174/" target="_blank">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#creative-campaigns">Creative Campaigns</a></li>
+            <li><a href="#social-media">Social Media</a></li>
+            <li><a href="#advertising">Advertising</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#writing">Writing</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section id="creative-campaigns">
+            <h2>Spin & Spill Campaign</h2>
+            <p>A creative campaign concept for a Boston-based boutique spin studio. <strong>Spin & Spill: Playlist Confessional</strong> is a July ride series built on community-sourced playlists, storytelling, and post-ride connection. This multi-touch campaign was designed to drive retention, deepen emotional engagement, and build a routine anchored in ritual and catharsis.</p>
+            
+            <p>The concept is simple but powerful: each Saturday in July, riders submit a song that connects to a weekly theme (exes, summer memories, empowerment, etc.), and the playlist for that week's class is built around their submissions. It's a ride that's crowdsourced and cathartic. Themes are announced weekly via Instagram and in-studio materials, and riders submit songs using a QR code that leads to a living Google Form or info page. Submissions can include stories, allowing instructors to create personal, engaging moments during class (like lighthearted or emotional shoutouts). If a song isn't spin-friendly, instructors can find a remix so no story is left behind.</p>
+            
+            <p>The goal of the series is to create loyalty, build routine, and help riders feel seen through music — whether they're healing, spiraling, laughing, or just vibing. It's boutique fitness with real emotional texture, wrapped in humor and community.</p>
+            
+            <p>The campaign expands into three branded experiences:</p>
+            <ul>
+                <li><strong>Spin & Spill Storytime</strong> – Instructor-led anecdotes and member-submitted shoutouts shared mid-ride and on social via Reels</li>
+                <li><strong>Spin & Spill Playlists</strong> – Themed weekly submissions turned into remixable ride soundtracks and Spotify shares</li>
+                <li><strong>Spin & Spill Saturdays</strong> – Espresso martinis, mimosas, and post-ride connection — think mini-brunch energy with confession prompts and playlist recaps</li>
+            </ul>
+            
+            <p>The campaign is supported by a "This & That" Instagram carousel series emphasizing wellness duality and humor, plus custom activation ideas such as:</p>
+            <ul>
+                <li>Boston Calling festival hydration lounge + confessional tent</li>
+                <li>Campus pop-ups and "Date Drop" gamified class pricing</li>
+                <li>Neighborhood takeover challenge and referral incentives</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1cB1vKRVmyDqCHFpLXJyLixzw6a0ZUb0f/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Poster Concept 1</h4>
+                    <p>Bold teaser version for in-studio signage</p>
+                </a>
+                <a href="https://drive.google.com/file/d/1ajawNAACg-LS9iR-HCfGdLanbFEggUWK/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Poster Concept 2</h4>
+                    <p>Emotional version for digital & community marketing</p>
+                </a>
+            </div>
+        </section>
+        
+        <section id="social-media">
+            <h2>BU Pardee: Instagram Trend-Based Campaigns</h2>
+            <p>These Instagram posts for BU Pardee School played off trending TikTok formats and were developed to maximize engagement with Gen Z audiences. I concepted, scripted, and oversaw production in collaboration with student interns.</p>
+            
+            <div class="project-links">
+                <a href="https://www.instagram.com/p/C5OmqXMOf_n/" target="_blank" class="project-link">
+                    <h4>"We Are Pardee Students...Of Course We..." TikTok Trend</h4>
+                    <p>Concepted + Directed Intern</p>
+                </a>
+                <a href="https://www.instagram.com/p/C6gytEpvM5_/" target="_blank" class="project-link">
+                    <h4>Finals Week Humor Post</h4>
+                    <p>Managed Production + Oversaw Intern Execution</p>
+                </a>
+                <a href="https://www.instagram.com/p/C-A51zIvncS/" target="_blank" class="project-link">
+                    <h4>"If You Ask How We Really Feel" TikTok Trend</h4>
+                    <p>Fully Concepted + Executed by Me</p>
+                </a>
+                <a href="https://www.instagram.com/p/C6qxu6aOXyH/?img_index=1" target="_blank" class="project-link">
+                    <h4>Met Gala Inspired "Who Wore It Better?"</h4>
+                    <p>Fully Concepted by Me - Leveraged Trending Event</p>
+                </a>
+                <a href="https://www.instagram.com/p/C6EVcbCu_e6/?img_index=1" target="_blank" class="project-link">
+                    <h4>Taylor Swift "Tortured Poets" Trend Tie-In</h4>
+                    <p>Fully Concepted + Executed by Me</p>
+                </a>
+                <a href="https://drive.google.com/file/d/1p65fLCbCRirE8-OPi2Vp2v2bmvMJ7FNi/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Valentine's Day "IR Dating Profiles" Campaign</h4>
+                    <p>Our highest-performing social campaign of the year</p>
+                </a>
+                <a href="https://samanthamelchin7.github.io/Pardee-Love/" target="_blank" class="project-link">
+                    <h4>"Are You Compatible with a Pardee Student?" Quiz</h4>
+                    <p>Interactive element I coded for Valentine's campaign</p>
+                </a>
+            </div>
+        </section>
+        
+        <section id="creative-commercials">
+            <h2>Levia THC Seltzer Commercial Series</h2>
+            <p>A series of fictional TV spot scripts and mockups for Levia, a THC-infused seltzer brand. Each spot blends humor, surrealism, and emotional tone to showcase product benefits through unexpected storytelling.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/18mPjYFRhmS4M1bPoU2EZrNXq1FLB6QQd/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View Levia Commercial Series PDF</h4>
+                    <p>Complete commercial concepts with creative rationale</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>DraftKings Commercial Concepts</h2>
+            <p>Satirical, sports-themed spec scripts designed to parody and subvert the tone of traditional sports betting commercials, while still delivering brand messaging.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1OP1jRrPU6TwUKX18rvEo7OTE9wGdv4WY/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View DraftKings Commercials PDF</h4>
+                    <p>Full series of commercial scripts with visual treatment</p>
+                </a>
+            </div>
+        </section>
+        
+        <section id="advertising">
+            <h2>APSIA Ad: Thrive Amid Uncertainty</h2>
+            <p>One of my most innovative approaches to advertising, developed through comprehensive Reddit research. I built a custom Python web scraper to analyze countless discussions about graduate programs in international relations, identifying key concerns in the current political climate. The data revealed anxieties about career prospects, program ROI, and how changing global politics affects the value of IR degrees.</p>
+            
+            <p>This data-driven approach led to our powerful "Thrive amid uncertainty, lead with impact" tagline that directly addresses these concerns. The final creative was selected through extensive A/B testing on LinkedIn to determine the highest-performing imagery and messaging combination.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1eLkSD_Z6HSrxLHZ2AHHG_BajWxVjEh4_/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View APSIA Ad</h4>
+                    <p>Data-informed ad creative with Python scraper insights</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>MAIR LinkedIn Ad Campaign</h2>
+            <p>These ads represented our strongest-performing digital campaign, consistently generating exceptional engagement. The series highlighting program flexibility, career outcomes, and Boston location advantages drove a remarkable 67% increase in inquiries during their run. Each ad was strategically focused on unique value propositions including program customization and diverse career paths.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1gwWSTgkQPPhNGNuunoYsGria-BBbP_OJ/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 1: Program Flexibility</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1R2FKEZi94rg4lbIPMHGLDtadhu8oqC5h/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 2: Career Outcomes</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1y7VAkiorwHjpJMvRGOvBPw-nVcXr88Rh/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 3: Boston Location</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1qHRQpcvtw-NZ5vc-mEVCQ92Je9Pyl9kk/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 4: Program Options</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1G-4QNzE9f9mh8H7NSht9IyRUt6HBnfzu/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 5: Career Support</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/18IcYBwIBB8zZZ7xUSEvtgcPlj_7FKbTQ/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 6: Program Value</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1t4v-8wPDuVKBDqunTizBDq1V3vDLjHo5/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Ad 7: Faculty Excellence</h4>
+                </a>
+            </div>
+        </section>
+        
+        <section id="publications">
+            <h2>Pardee Magazine</h2>
+            <p>An incredible milestone project where I managed the complete end-to-end process of our inaugural alumni magazine. I wrote the majority of content, conducted alumni interviews under tight deadlines, facilitated information gathering, and coordinated with external design firms and editorial leads. The magazine was distributed to over 11,000 alumni and features our showcase "Next Generation of Global Leaders" cover story that perfectly captures the Pardee School's essence and mission.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1knYQfOKEoteOTfTzpCtCv0Bqx2oTiVud/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View Pardee Magazine</h4>
+                    <p>Complete publication sent to 11,000+ alumni</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Admissions Brochure</h2>
+            <p>This foundational piece helped establish a more cohesive visual identity and color scheme for the Pardee School. I wrote all content and sourced images for this high-visibility recruitment tool, leading the creative brief, visual direction, and copy development. While the final design was executed by BU Creative Services, my strategic direction ensured the brochure provides comprehensive program information while maintaining an engaging tone that reflects the Pardee brand.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1LHF_Ihg2HmxH7EpN0ZSNeKNevPUYnGzs/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View Admissions Brochure</h4>
+                    <p>Primary recruitment tool with my content and direction</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Pardee 10-Year Gala Campaign</h2>
+            <p>Building on our Valentine's Day success, I created and managed the social and print creative for Pardee's 10-Year Gala, leveraging our consistent branding colors established in the admissions brochure and alumni magazine. The campaign featured an interactive trivia quiz about the school's 10-year history that I coded and embedded directly into our site, effectively gamifying our event promotion.</p>
+            
+            <p>This approach to making institutional history engaging through interactive elements proved extremely effective for event participation. I overheard attendees discussing their quiz results during the actual gala, demonstrating the campaign's memorability and engagement factor.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/19LnALSx0Y3mEXXZeoMugWnxmLATJCGS6/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>View Gala Program</h4>
+                    <p>Print materials with consistent branding system</p>
+                </a>
+                <a href="https://samanthamelchin7.github.io/Pardee-Quiz/" target="_blank" class="project-link">
+                    <h4>View 10-Year Trivia Quiz</h4>
+                    <p>Interactive element I coded for campaign engagement</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>New England Aquarium MBTA Campaign</h2>
+            <p>Conceptual out-of-home campaign designed for the Boston transit system. These mockups present a playful approach to promoting the aquarium by connecting sea creatures to relatable MBTA experiences.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1llz-r_1hYrYfoBJ_22FaEdXEyjYsGQJ-/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>MBTA Campaign Concept 1</h4>
+                    <p>Original sketch and campaign concept</p>
+                </a>
+                <a href="https://drive.google.com/file/d/1UkguHjADpuZCA1HcOd6jHQ4psaQ_W101/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>MBTA Campaign Concept 2</h4>
+                    <p>Alternative transit-oriented approach</p>
+                </a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>State Department Public-Private Partnership</h2>
+            <p>Print and branding assets I developed for a major partnership event between Boston University and the U.S. State Department in Washington D.C. This high-profile project received positive feedback from Secretary Blinken himself, underscoring the professional quality of the materials produced.</p>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/16e5HOocTj07_c_OYauqr4fq5Xm5zw2tK/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Material 1</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1EFdEVPfwwsB7mylN5jJKBPyNHUmftANM/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Material 2</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1KDCAPNfygJBZqE6HCMYGExdXEe5ZCBLR/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Material 3</h4>
+                </a>
+                <a href="https://drive.google.com/file/d/1CzdEwhZ9gI3sSMZTVBYINlE5l6QeeDN-/view?usp=drive_link" target="_blank" class="project-link">
+                    <h4>Material 4</h4>
+                </a>
+            </div>
+        </section>
+        
+        <section id="writing">
+            <h2>Featured Writing</h2>
+            <p>As the primary editorial voice for the Pardee School of Global Studies, I authored more than 270 articles annually for the school's website. These are just a few of my favorites — each written, pitched, or coordinated by me, often under tight deadlines and with a focus on humanizing institutional storytelling.</p>
+            
+            <div class="project-links">
+                <a href="https://www.bu.edu/pardeeschool/2024/10/18/meeting-terrorists-making-movies-and-mentoring-students-prof-stern-brings-real-experience-to-parde/" target="_blank" class="project-link">
+                    <h4>Meeting Terrorists, Making Movies, and Mentoring Students</h4>
+                    <p>Faculty profile highlighting real-world expertise</p>
+                </a>
+                <a href="https://www.bu.edu/pardeeschool/2024/12/13/we-are-our-ancestors-wildest-dreams-a-graduates-journey-from-kuwait-to-pardee/" target="_blank" class="project-link">
+                    <h4>A Graduate's Journey from Kuwait to Pardee</h4>
+                    <p>Student success story with global perspective</p>
+                </a>
+                <a href="https://www.bu.edu/pardeeschool/2024/10/03/bu-students-embrace-african-languages-and-cultures-through-flas/" target="_blank" class="project-link">
+                    <h4>Students Embrace African Languages and Cultures</h4>
+                    <p>Program feature on cultural immersion experiences</p>
+                </a>
+                <a href="https://www.bu.edu/pardeeschool/2024/12/13/latin-american-studies-center-supports-innovative-student-publication-on-belonging-and-identity/" target="_blank" class="project-link">
+                    <h4>Student Publication on Belonging & Identity</h4>
+                    <p>Spotlight on student-led initiatives</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <h3>Let's Connect</h3>
+            <p>I'm currently exploring new opportunities in strategic marketing and communications.</p>
+            <a href="mailto:samantha.melchin@gmail.com" class="btn">Contact Me</a>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/samantha-melchin-163b30174/" target="_blank">In</a>
+            </div>
+            
+            <p class="copyright">© 2025 Samantha Melchin. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
